@@ -124,7 +124,7 @@ function ProductFrom() {
           <p className="line-through text-gray-500 "> $500</p> <span className="text-green-500">$300</span>
           </div>
           <div  className=" flex justify-center text-blue-500 ">
-          <Link to={`/ReadbyProduct/${item._id}`} className="font-medium py-1 px-3  rounded-xl mt-2 text-gray-400 hover:text-black no-underline">Visit</Link>
+          <Link to={`/ProductDetails/${item._id}`} className="font-medium py-1 px-3  rounded-xl mt-2 text-gray-400 hover:text-black no-underline">Visit</Link>
           <Link to={`/ReadbyProduct/${item._id}`} className="font-medium py-2 px-3  rounded-xl mt-2 text-gray-400  hover:text-black"><FaEdit/></Link>
           </div>
         </div>

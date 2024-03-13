@@ -6,6 +6,7 @@ import OTPPage from "./page/OTPPage"
 import ProfilePage from "./page/ProfilePage"
 import ProductPage from "./page/ProductPage"
 import ProductUpdatePage from "./page/ProductUpdatePage"
+import ProductDetails from "./Component/Product/ProductDetails"
 function App() {
 
 
@@ -20,6 +21,7 @@ function App() {
   <Route path="/Profile" element={<ProfilePage/>}/>
   <Route path="/Product" element={<ProductPage/>}/>
   <Route path="/ReadbyProduct/:productID" element={<ProductUpdatePage/>}/>
+  <Route path="/ProductDetails/:productID" element={<ProductDetails/>}/>
 </Routes>
 </BrowserRouter>
     </>

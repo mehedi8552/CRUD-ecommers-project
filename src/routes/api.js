@@ -21,7 +21,7 @@ router.post('/CreateProduct',ProductController.CreateProduct);
 
 //Product Details
 router.get('/ReadbyProduct/:productId',ProductController.ReadProductById);
-
+router.get('/Readbyremark/:name',ProductController.Readbyremark);
 
 
 

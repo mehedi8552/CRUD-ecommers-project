@@ -4,7 +4,8 @@ const{
     UpdateProductService,
     CreateProductService,
     DeleteProductService,
-    ReadProductByIdService
+    ReadProductByIdService,
+    ReadbyremarkService
 } = require('../Services/ProductServices')
 
 
@@ -15,6 +16,10 @@ exports.ReadProduct = async (req,res)=>{
 }
 exports.ReadProductById = async (req,res)=>{
     let result = await ReadProductByIdService(req);
+    return res.status(200).json(result)
+}
+exports.Readbyremark = async (req,res)=>{
+    let result = await ReadbyremarkService(req);
     return res.status(200).json(result)
 }
 

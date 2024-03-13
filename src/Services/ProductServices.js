@@ -16,11 +16,24 @@ const ReadProductService = async (req)=>{
 
 const ReadProductByIdService = async (req)=>{
     try {
-        
-        
         //let productid = new ObjectId(req.params.productId);
         //console.log(product);
         const products = await ProductModel.findById(req.params.productId);
+        
+    if (!products) {
+      return {status:"fail", message:"No data Found"}
+    }else{
+        return {status:"success", data:products}
+    }
+      } catch (e) {
+        return {status:"fail", message:e.toString()}
+}
+}
+
+const ReadbyremarkService = async (req)=>{
+    try {
+        const name = req.params.name;        
+        const products = await ProductModel.findOne({name:name});
         
     if (!products) {
       return {status:"fail", message:"No data Found"}
@@ -79,5 +92,6 @@ module.exports={
     UpdateProductService,
     CreateProductService,
     DeleteProductService,
-    ReadProductByIdService
+    ReadProductByIdService,
+    ReadbyremarkService
 }
